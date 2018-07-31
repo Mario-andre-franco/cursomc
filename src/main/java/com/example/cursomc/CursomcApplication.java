@@ -1,5 +1,6 @@
 package com.example.cursomc;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +9,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.cursomc.domain.Categoria;
+import com.example.cursomc.domain.Cidad;
+import com.example.cursomc.domain.Estado;
 import com.example.cursomc.domain.Produto;
 import com.example.cursomc.repositories.CategoriaRepository;
+import com.example.cursomc.repositories.CidadeRepository2;
+import com.example.cursomc.repositories.EstadoRepository;
 import com.example.cursomc.repositories.ProdutoRepository;
 
 @SpringBootApplication
@@ -20,6 +25,13 @@ public class CursomcApplication implements CommandLineRunner {
 	@Autowired
 	private ProdutoRepository produtoRepository;
 
+	@Autowired
+	private EstadoRepository estadoRepository;
+	
+	@Autowired
+	private CidadeRepository2 cidadeRepository2;
+	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(CursomcApplication.class, args);
 	}
@@ -41,8 +53,21 @@ public class CursomcApplication implements CommandLineRunner {
 		p2.getCategorias().addAll(Arrays.asList(cat1, cat2));
 		p3.getCategorias().addAll(Arrays.asList(cat1));
 
-		categoriaRepository.save(Arrays.asList(cat1, cat2)); //salva todas categorias
-		produtoRepository.save(Arrays.asList(p1, p2, p3)); //salva todos os produtos
+		categoriaRepository.save(Arrays.asList(cat1, cat2)); // salva todas categorias
+		produtoRepository.save(Arrays.asList(p1, p2, p3)); // salva todos os produtos
+
+		Estado est1 = new Estado(null, "Minas Gerais");
+		Estado est2 = new Estado(null, "São paulo");
+
+		Cidad c1 = new Cidad(null, "Uberlandia", est1);
+		Cidad c2 = new Cidad(null, "Sao paulo", est2);
+		Cidad c3 = new Cidad(null, "Campinas", est2);
+
+		est1.getCidades().addAll(Arrays.asList(c1));
+		est2.getCidades().addAll(Arrays.asList(c2, c3));
+		
+		estadoRepository.save(Arrays.asList(est1,est2)); //quem eu vou salvar no banco
+		cidadeRepository2.save(Arrays.asList(c1,c2,c3));
 
 	}
 

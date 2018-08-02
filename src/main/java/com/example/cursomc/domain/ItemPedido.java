@@ -5,12 +5,16 @@ import java.io.Serializable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
 
 @Entity
 public class ItemPedido implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 
 	@JsonIgnore
 	@EmbeddedId
@@ -25,6 +29,22 @@ public class ItemPedido implements Serializable {
 	}
 
 	public ItemPedido(Pedido pedido, Produto produto, double desconto, Integer quantidade, Double preco) {
+=======
+	
+	
+	@EmbeddedId
+	private ItemPedidoPK id = new ItemPedidoPK();
+	
+	private double Desconto;
+	private Integer quantidade;
+	private Double 	preco;
+	
+	public ItemPedido () {
+		
+	}
+
+	public ItemPedido(Pedido pedido,Produto produto, double desconto, Integer quantidade, Double preco) {
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
 		super();
 		id.setPedido(pedido);
 		id.setProduto(produto);
@@ -33,16 +53,27 @@ public class ItemPedido implements Serializable {
 		this.preco = preco;
 	}
 
+<<<<<<< HEAD
 	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
 	}
 
+=======
+	public Pedido getPedido () {
+		return id.getPedido();
+	}
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
 	
 	public Produto getProduto() {
 		return id.getProduto();
 	}
+<<<<<<< HEAD
 
+=======
+	
+	
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
 	public ItemPedidoPK getId() {
 		return id;
 	}
@@ -99,5 +130,10 @@ public class ItemPedido implements Serializable {
 			return false;
 		return true;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
 
 }

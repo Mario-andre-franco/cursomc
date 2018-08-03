@@ -15,7 +15,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.example.cursomc.domain.enums.TipoCliente;
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonBackReference;
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 
 @Entity
 public class Cliente implements Serializable {
@@ -30,7 +38,11 @@ public class Cliente implements Serializable {
 	private String cpfOuCnpj;
 	private Integer tipo;
 
+<<<<<<< HEAD
 	
+=======
+	@JsonManagedReference
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@OneToMany(mappedBy = "cliente")
 	private List<Endereco> enderecos = new ArrayList<>();
 
@@ -38,7 +50,14 @@ public class Cliente implements Serializable {
 	@CollectionTable(name = "TELEFONE")
 	private Set<String> telefones = new HashSet<>(); // representando telefones e garantido que nao ira repetir
 
+<<<<<<< HEAD
 	@JsonIgnore
+=======
+<<<<<<< HEAD
+	@JsonBackReference
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@OneToMany(mappedBy="cliente")
 	private List<Pedido> pedidos = new ArrayList<>();
 

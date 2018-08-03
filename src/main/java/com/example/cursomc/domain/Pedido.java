@@ -15,8 +15,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 @Entity
 public class Pedido implements Serializable {
 
@@ -25,16 +34,34 @@ public class Pedido implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	
 	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date instante;
 	
 	
+<<<<<<< HEAD
+=======
+	@JsonManagedReference
+	@OneToOne(cascade=CascadeType.ALL,mappedBy="pedido")//pra evitar erro 
+	private Pagamento pagamento;
+	
+	@JsonManagedReference
+=======
+	private Date instante;
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	
 	@OneToOne(cascade=CascadeType.ALL,mappedBy="pedido")//pra evitar erro 
 	private Pagamento pagamento;
 	
 	
+<<<<<<< HEAD
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@ManyToOne
 	@JoinColumn(name="cliente_id") 
 	private Cliente cliente;

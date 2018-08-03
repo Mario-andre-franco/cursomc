@@ -11,7 +11,14 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 
 import com.example.cursomc.domain.enums.EstadoPagamento;
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonBackReference;
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 
 @Entity
 @Inheritance(strategy=InheritanceType.JOINED)
@@ -23,8 +30,16 @@ public abstract class Pagamento implements Serializable {
 	private Integer id;
 	private Integer estado;
 	
+<<<<<<< HEAD
 	
 	@JsonIgnore
+=======
+<<<<<<< HEAD
+	
+	@JsonBackReference
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@OneToOne
 	@JoinColumn(name="pedido_id")
 	@MapsId

@@ -5,12 +5,23 @@ import java.io.Serializable;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 
 @Entity
 public class ItemPedido implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 
 	@JsonIgnore
 	@EmbeddedId
@@ -25,6 +36,25 @@ public class ItemPedido implements Serializable {
 	}
 
 	public ItemPedido(Pedido pedido, Produto produto, double desconto, Integer quantidade, Double preco) {
+<<<<<<< HEAD
+=======
+=======
+	
+	
+	@EmbeddedId
+	private ItemPedidoPK id = new ItemPedidoPK();
+	
+	private double Desconto;
+	private Integer quantidade;
+	private Double 	preco;
+	
+	public ItemPedido () {
+		
+	}
+
+	public ItemPedido(Pedido pedido,Produto produto, double desconto, Integer quantidade, Double preco) {
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 		super();
 		id.setPedido(pedido);
 		id.setProduto(produto);
@@ -33,16 +63,37 @@ public class ItemPedido implements Serializable {
 		this.preco = preco;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@JsonIgnore
 	public Pedido getPedido() {
 		return id.getPedido();
 	}
 
+<<<<<<< HEAD
+=======
+=======
+	public Pedido getPedido () {
+		return id.getPedido();
+	}
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	
 	public Produto getProduto() {
 		return id.getProduto();
 	}
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+	
+	
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	public ItemPedidoPK getId() {
 		return id;
 	}
@@ -99,5 +150,13 @@ public class ItemPedido implements Serializable {
 			return false;
 		return true;
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 
 }

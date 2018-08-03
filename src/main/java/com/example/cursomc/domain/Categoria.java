@@ -10,7 +10,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity // converte objetos para tabela de BD
@@ -23,7 +26,11 @@ public class Categoria implements Serializable {
 	private Integer id;
 	private String nome;
 	
+<<<<<<< HEAD
 	
+=======
+	@JsonManagedReference
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@ManyToMany (mappedBy="categorias")
 	private List<Produto> produtos = new ArrayList<>(); //associação categoria com produto
 

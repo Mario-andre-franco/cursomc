@@ -16,7 +16,14 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+<<<<<<< HEAD
+import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 
 @Entity
 public class Produto implements Serializable {
@@ -35,7 +42,14 @@ public class Produto implements Serializable {
 																																					// tabelas
 	private List<Categoria> categorias = new ArrayList<>();
 
+<<<<<<< HEAD
 	@JsonIgnore
+=======
+<<<<<<< HEAD
+	@JsonIgnore
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	@OneToMany(mappedBy="id.produto")
 	private Set<ItemPedido> items = new HashSet<>();
 
@@ -51,7 +65,14 @@ public class Produto implements Serializable {
 	}
 
 	
+<<<<<<< HEAD
 	@JsonIgnore
+=======
+<<<<<<< HEAD
+	@JsonIgnore
+=======
+>>>>>>> 199628d15e35f984588ad5673a9e4a237f010b98
+>>>>>>> 63112e158099a152c7d8e81aa40c9279772ba1a1
 	public List<Pedido> getPedidos() {
 	List<Pedido> lista = new ArrayList<>();
 		for (ItemPedido x : items) {
